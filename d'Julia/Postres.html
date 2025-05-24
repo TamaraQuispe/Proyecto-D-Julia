@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería D'Julia</title>
+    <link rel="stylesheet" href="pruebacss.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  <script>
+     function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+
+    <header class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div><a href="prueba.html#inicio" class="logo">D'Julia</a></div>
+        <div class="items">
+          <nav class="nav-links" id="navLinks">
+                <a href="prueba.html#inicio">Inicio</a>
+                <a href="prueba.html#nosotros">Sobre Nosotros</a>
+                <a href="prueba.html#contacto">Contacto</a>
+                <a href="prueba.html#servicios">Servicios</a>
+                <a href="prueba.html#testimonios">Testimonios</a>
+                <a href="prueba.html#locales">Locales</a>
+                <a href="prueba.html#carta">Carta</a>
+                <a href="prueba.html#galeria">Galería</a>
+                <a href="prueba.html#menu">Menú</a>
+            </nav>
+            <div class="iconos">
+
+                <a href="ubicacion.html"><span class="material-symbols-outlined">near_me</span></a><!-- Ubicación -->
+                <a href="carrito.html"><span class="material-symbols-outlined">shopping_cart</span></a><!-- Carrito -->
+                <a href="telefono.html"><span class="material-symbols-outlined">phone</span></a><!-- Telefono -->
+                <a href="account.html"><span class="material-symbols-outlined">
+                        account_circle
+                    </span></a> <!-- Cuenta -->
+            </div>
+        </div>
+
+    </header>
+
+<section id="productos" class="seccion productos-section">
+ <div>
+        <div>
+        <h2>Postres</h2>
+        <hr>
+        </div>
+    </div>
+  <div class="productos-grid">
+
+
+<!-- Contenedor para el detalle (vacío e invisible al inicio) -->
+<div id="detalleProducto">
+  <div class="detalle-contenido">
+    <img id="detalleImagen" src="" alt="">
+    <div>
+      <h3 id="detalleNombre"></h3>
+      <p id="detalleDescripcion"></p>
+      <p id="detallePrecio"></p>
+
+      <div class="detalle-acciones">
+        <div class="detalle-cantidad">
+          <button onclick="cambiarCantidad(-1)" class="boton-cantidad">-</button>
+          <input type="text" id="cantidadInput" value="1" readonly>
+          <button onclick="cambiarCantidad(1)" class="boton-cantidad">+</button>
+        </div>
+
+        <button class="boton-carrito" onclick="agregarCarrito()">
+          Añadir al carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+    
+    <div class="product-card" onclick="mostrarDetalle(this, 'Profiterol de pistacho')">
+      <img src="imagenes/Postres.webp" alt="Postre">
+      <div class="product-info">
+        <h3>Profiterol de pistacho</h3>
+        <p>S/12.50</p>
+      </div>
+    </div>
+
+    
+    <div class="product-card" onclick="mostrarDetalle(this, 'Mini milhojas de profiteroles')">
+      <img src="imagenes/Mini Mil hojas.webp" alt="Postre Mini milhojas">
+      <div class="product-info">
+        <h3>Mini milhojas de profiteroles</h3>
+        <p>S/40.00</p>
+      </div>
+    </div>
+
+    
+    <div class="product-card" onclick="mostrarDetalle(this, 'Ecler de chocolate')">
+      <img src="imagenes/Ecler de chocolate.webp" alt="Postre de chocolate">
+      <div class="product-info">
+        <h3>Ecler de chocolate</h3>
+        <p>S/9.90</p>
+      </div>
+    </div>
+
+   
+    <div class="product-card" onclick="mostrarDetalle(this, 'Mil hojas de crema (Grande)')">
+      <img src="imagenes/Mil hojas cremada.webp" alt="Mil hojas cremada">
+      <div class="product-info">
+        <h3>Mil hojas de crema (Grande)</h3>
+        <p>S/60.00</p>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="mostrarDetalle(this, 'Torta de chocolate')">
+      <img src="imagenes/Torta chocolate.webp" alt="Tajada de chocolate">
+      <div class="product-info">
+        <h3>Torta de chocolate</h3>
+        <p>S/8.00</p>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="mostrarDetalle(this, 'Mini Pasion de milhojas')">
+      <img src="imagenes/Mini pasion de mil hojas.webp" alt="Mini pasion de milhojas">
+      <div class="product-info">
+        <h3>Mini Pasion de milhojas</h3>
+        <p>S/40.00</p>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+<footer>
+        <p>&copy; 2025 D'Julia - Todos los derechos reservados</p>
+</footer>
+
+<script>
+  const productos = {
+    "Profiterol de pistacho": {
+      descripcion: "Pasta choux, crema pastelera de pistacho, ganache de pistacho y cobertura de chocolate blanco.",
+      precio: "S/12.50",
+      imagen: "imagenes/Postres.webp"
+    },
+    "Mini milhojas de profiteroles": {
+      descripcion: "Masa hojaldre, manjarblanco, crema pastelera, viruta de hojaldre y profiteroles de chocolate.",
+      precio: "S/40.00",
+      imagen: "imagenes/Mini Mil hojas.webp"
+    },
+    "Ecler de chocolate": {
+      descripcion: "Pasta choux, crema pastelera y chocolate bitter.Refrigerado",
+      precio: "S/9.90",
+      imagen: "imagenes/Ecler de chocolate.webp"
+    },
+    "Mil hojas de crema (Grande)": {
+      descripcion: "Masa hojaldre, bizcochuelo de vainilla, crema pastelera cremada, fresas, snudel de canela y salsa de limón.",
+      precio: "S/60.00",
+      imagen: "imagenes/Mil hojas cremada.webp"
+    },
+    "Torta de chocolate": {
+      descripcion: "Masa hojaldre, bizcochuelo de vainilla, crema pastelera cremada, fresas, snudel de canela y salsa de limón.",
+      precio: "S/8.00",
+      imagen: "imagenes/Torta chocolate.webp"
+    },
+    "Mini Pasion de milhojas": {
+      descripcion: "Masa hojaldre, manjarblanco, crema pastelera, relleno de fresas, crema chantilly y fresas.",
+      precio: "S/40.00",
+      imagen: "imagenes/Mini pasion de mil hojas.webp"
+    },
+  };
+
+  const detalle = document.getElementById('detalleProducto');
+  const detalleNombre = document.getElementById('detalleNombre');
+  const detalleDescripcion = document.getElementById('detalleDescripcion');
+  const detallePrecio = document.getElementById('detallePrecio');
+  const detalleImagen = document.getElementById('detalleImagen');
+  const cantidadInput = document.getElementById('cantidadInput');
+
+  let cantidad = 1;
+
+  function mostrarDetalle(elemento, nombreProducto) {
+    const producto = productos[nombreProducto];
+    if (!producto) return;
+
+    detalleNombre.textContent = nombreProducto;
+    detalleDescripcion.textContent = producto.descripcion;
+    detallePrecio.textContent = producto.precio;
+    detalleImagen.src = producto.imagen;
+    detalleImagen.alt = nombreProducto;
+    cantidad = 1;
+    cantidadInput.value = cantidad;
+
+    // Mostrar detalle y desplazar al producto
+    detalle.style.display = 'block';
+
+    // Opcional: Scroll suave hacia el detalle
+    detalle.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function cambiarCantidad(valor) {
+    cantidad += valor;
+    if (cantidad < 1) cantidad = 1;
+    cantidadInput.value = cantidad;
+  }
+
+  function agregarCarrito() {
+    alert(`Has agregado ${cantidad} producto(s) al carrito. (Versión beta)`);
+  }
+</script>
+
+</body>
+</html>

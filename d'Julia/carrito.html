@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://files.cdn-files-a.com/uploads/10617969/2000_un-67fad1cdb7888.jpg') no-repeat center center/cover;
+            height: 80vh;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            overflow-y: hidden;
+        }
+
+        .contenedor-carrito {
+            max-width: 800px;
+            margin: 180px auto;
+            background-color: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .producto {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .info-producto {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-producto strong {
+            font-size: 18px;
+            margin-bottom: 5px;
+            justify-content: center;
+            display: flex;
+        }
+
+
+        .boton-comprar {
+            display: block;
+            margin: 30px auto 0;
+            background-color: #b0003a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .boton-comprar:hover {
+            background-color: #7a002a;
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .cerrar:hover {
+            color: #b83267;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor-carrito">
+        <a href="prueba.html" class="cerrar"><i class="fas fa-times"></i></a>
+        <h2>Carrito de Compras</h2>
+
+        <div class="producto">
+            <div class="info-producto">
+                <strong>Carrito de compras vacio</strong>
+            </div>
+        </div>
+        <a class="boton-comprar" onclick="mostrarContinuacion()">Esperando</a>
+    </div>
+
+
+    <script>
+        function mostrarContinuacion() {
+            alert('Estás en la versión beta. Estamos trabajando en ello.');
+        }
+    </script>
+</body>
+
+</html>
