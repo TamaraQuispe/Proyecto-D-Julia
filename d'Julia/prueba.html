@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,26 +15,25 @@
 </head>
 <body>
     <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById("navLinks");
-            navLinks.classList.toggle("active");
-        }
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
 
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('show');
-        }
+        // Alterna las clases "active" y "show" en el mismo elemento
+        navLinks.classList.toggle("active");
+        navLinks.classList.toggle("show");
+    }
 
-        window.addEventListener("scroll", function () {
-            const navbar = document.querySelector(".navbar");
-            if (window.scrollY > 50) {
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+
+        // Agrega o quita la clase "scrolled" según la posición de la ventana
+        if (window.scrollY > 50) {
             navbar.classList.add("scrolled");
-            } else {
+        } else {
             navbar.classList.remove("scrolled");
-            }
-        });
-    </script>
-
+        }
+    });
+</script>
     <header class="navbar">
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div><a href="#inicio" class="logo"><span>D' Julia</span></a></div>
@@ -157,21 +156,21 @@
         </div>
         <div class="servicios-grid">
             <div class="servicios-card">
-                <img class="img-service img-circle-mini" src="" alt="Servicio 1">
+                <img class="img-service img-circle-mini" src="imagenes/pastel.webp" alt="Servicio 1">
                 <div class="servicios-info">
                     <h4>Pasteles Personalizados</h4>
                     <p>Celebre sus momentos especiales con nuestros pasteles personalizados diseñados para cumplir con sus especificaciones exactas, asegurando que cada porción sea tan memorable como el evento en sí.</p>
                 </div>
             </div>
             <div class="servicios-card">
-                <img class="img-service img-circle-mini" src="" alt="Servicio 2">
+                <img class="img-service img-circle-mini" src="imagenes/muffin.webp" alt="Servicio 2">
                 <div class="servicios-info">
                     <h4>Deliciosos Pasteles</h4>
                     <p>Deléitese con nuestra selección de pasteles, cada uno elaborado con una mezcla única de tradición y creatividad, perfectos para cualquier ocasión.</p>
                 </div>
             </div>
             <div class="servicios-card">
-                <img class="img-service img-circle-mini" src="" alt="Servicio 3">
+                <img class="img-service img-circle-mini" src="imagenes/panadero.webp" alt="Servicio 3">
                 <div class="servicios-info">
                     <h4>Panes Artesanales</h4>
                     <p>Nuestros panes se elaboran artesanalmente y se hornean a diario con los mejores ingredientes. Disfrute de una variedad de sabores que satisfacen gustos clásicos y contemporáneos.</p>

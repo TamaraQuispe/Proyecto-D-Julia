@@ -17,6 +17,7 @@ body {
     color: var(--text-color);
     font-family: var(--global-font), 'Merriweather', Arial, sans-serif;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 h2 {
@@ -178,6 +179,8 @@ nav a {
     object-fit: cover;
 
 }
+
+
 /*///////////////////////////////////////////////////*/
 /*-------------- fin --------------------  Fin-Header*/
 /*///////////////////////////////////////////////////*/
@@ -478,20 +481,29 @@ button[type="submit"]:hover {
 .contact-section-wrapper {
     background-color: var(--background-section-secundary-color);
     padding: 40px 0;
+    min-height: 100vh; /* <--- fuerza que ocupe al menos toda la altura de la pantalla */
 }
 
+
 .contact-container {
-    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    border: 2px solid transparent;
     padding: 60px 40px;
-    background-color: #f8f8f8;
     max-width: 1000px;
     margin: 0 auto;
     font-family: inherit;
-    animation: showup 1s ease-in-out;
-    animation-fill-mode: both;
-    animation-timeline: scroll();
-    animation-range: 20% 35.5%;
+    animation: slideInUp 1s ease-in-out both;
 }
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 
 /* TÍTULO Y PÁRRAFO */
 .contact-container h2 {
@@ -517,10 +529,11 @@ button[type="submit"]:hover {
 .contact-container p {
     text-align: center;
     font-size: 18px;
-    color: #666;
+    color: #333; /* Antes era #666, ahora más oscuro */
     margin-bottom: 40px;
     line-height: 1.6;
 }
+
 
 /* FORMULARIO */
 .contact-form {
